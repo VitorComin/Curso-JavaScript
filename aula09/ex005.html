@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: aqua;
+            font: normal 18pt Arial;
+            color: aliceblue;
+        }
+        strong {
+            color: rgb(171, 160, 144);
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        
+        var p1 = window.document.getElementsByTagName("p")[1]
+        window.document.write("Está escrito assim: " + p1.innerHTML) // Se fosse innerText iria pegar só o texto, sem coisas como o Strong
+        //var d = window.document.getElementById("msg") // Seleciona o elemento com id pelo metodo getElementById
+        //d.style.background = 'green' // troca o background color
+        //window.document.getElementById("msg").innerText = 'Troquei' // Troca o texto da DIV
+        var x = window.document.querySelector('div#msg') // Classe é . e ID é #
+        
+    </script>
+</body>
+</html>
